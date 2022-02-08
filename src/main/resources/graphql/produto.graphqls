@@ -1,0 +1,22 @@
+type ProdutoEntity{
+    id:ID,
+    descricao:String,
+    valor:Float,
+    quantidade:Float
+}
+
+input ProdutoInput{
+    descricao:String,
+    valor:Float,
+    quantidade:Int
+}
+
+extend type Query {
+    getProduto(id:String!):ProdutoEntity
+    getProdutos:[ProdutoEntity]
+}
+
+extend type Mutation {
+    saveProduto(produto:ProdutoInput!):ProdutoEntity!
+    deleteProduto(id:String!):Boolean!
+}

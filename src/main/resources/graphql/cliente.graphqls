@@ -4,9 +4,17 @@ type ClienteEntity{
     cep:String
 }
 
+input ClienteInput{
+    nome:String,
+    cep:String
+}
+
 type Query {
-
-    getCliente(id:String):ClienteEntity
-
+    getCliente(id:String!):ClienteEntity
     getClientes:[ClienteEntity]
+}
+
+type Mutation {
+    saveCliente(cliente:ClienteInput!):ClienteEntity!
+    deleteCliente(id:String!):Boolean!
 }

@@ -1,5 +1,6 @@
 package br.com.pocs.springgraphql.springgraphql.service;
 
+import br.com.pocs.springgraphql.springgraphql.model.ClienteEntity;
 import br.com.pocs.springgraphql.springgraphql.model.CompraEntity;
 import br.com.pocs.springgraphql.springgraphql.repository.CompraRepository;
 import lombok.RequiredArgsConstructor;
@@ -37,4 +38,9 @@ public class CompraService {
         }
         return false;
     }
+
+    public List<CompraEntity> findAllByClienteEntity(ClienteEntity clienteEntity){
+        return compraRepository.findAllByClienteEntity(clienteEntity);
+    }
+
 }

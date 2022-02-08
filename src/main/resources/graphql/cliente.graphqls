@@ -1,7 +1,8 @@
 type ClienteEntity{
     id:ID,
     nome:String,
-    cep:String
+    cep:String,
+    compras:[CompraEntity]
 }
 
 input ClienteInput{

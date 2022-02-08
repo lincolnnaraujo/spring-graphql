@@ -1,6 +1,12 @@
+type ClienteEntity{
+    id:ID,
+    nome:String,
+    cep:String
+}
+
 type Query {
 
-    hello:String
+    getCliente(id:String):ClienteEntity
 
-    soma(a:Int, b:Int):Int
+    getClientes:[ClienteEntity]
 }

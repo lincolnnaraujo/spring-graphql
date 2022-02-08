@@ -11,7 +11,7 @@ import java.util.UUID;
 
 @Component
 @RequiredArgsConstructor
-public class QueryGraphQL implements GraphQLQueryResolver {
+public class ClienteGraphQL implements GraphQLQueryResolver {
 
     private final ClienteRepository clienteRepository;
 

@@ -1,1 +1,0 @@
-INSERT INTO cliente(nome, cep) values ('Lincoln Araujo', '13020240');

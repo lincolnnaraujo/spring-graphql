@@ -1,5 +1,7 @@
+DROP TABLE if exists cliente;
+
 CREATE TABLE cliente(
-    id UUID DEFAULT RANDOM_UUID PRIMARY KEY,
+    id UUID PRIMARY KEY,
     nome VARCHAR(100) NOT NULL,
     cep VARCHAR(8) NOT NULL
 );

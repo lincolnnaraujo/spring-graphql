@@ -1,0 +1,24 @@
+type CompraEntity{
+    id:ID,
+    status:String,
+    valor:Float,
+    cliente:ClienteEntity,
+    produto:ProdutoEntity
+}
+
+input CompraInput{
+    valor:Float,
+    status:String,
+    clienteId:String,
+    produtoId:String
+}
+
+extend type Query {
+    getCompra(id:String!):CompraEntity
+    getCompras:[CompraEntity]
+}
+
+extend type Mutation {
+    saveCompra(compra:CompraInput!):CompraEntity!
+    deleteCompra(id:String!):Boolean!
+}
